@@ -14,6 +14,7 @@ try {
 }
 var to = ganache.to;
 var initArgs = require("./args")
+const { default: MemDown } = require('memdown');
 
 var gmDetailedVersion = "GodMode Ganache CLI v" + pkg.godmodeVersion;
 var detailedVersion = "Ganache CLI v" + pkg.version + " (godmode-ganache-core: " + ganache.version + ")";
@@ -92,6 +93,7 @@ var options = {
   verbose: argv.v,
   secure: argv.n,
   db_path: argv.db,
+  db: argv.dbMemdown ? MemDown() : null,
   hd_path: argv.hdPath,
   account_keys_path: argv.account_keys_path,
   vmErrorsOnRPCResponse: !argv.noVMErrorsOnRPCResponse,
