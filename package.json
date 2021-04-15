@@ -1,7 +1,7 @@
 {
 	"name": "godmode-ganache-cli",
-	"version": "6.12.1",
-	"godmodeVersion": "0.0.1",
+	"version": "6.12.2",
+	"godmodeVersion": "0.0.2",
 	"bin": {
 		"ganache-cli": "cli.js"
 	},
